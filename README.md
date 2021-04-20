@@ -1,7 +1,7 @@
 # flow-config-generator
 Generator script of the configuration files needed to run a simulation on Eclipse Sumo's Flow Framework.
 
-The generated file will be located at the route indicated on the first param and will contain the following schema:
+The generated file will be located on a created folder called "generated" at the route indicated on the "--output-directory" or "-o" param and will contain the following schema:
 
 {     
 &nbsp;&nbsp; "GLOBAL" : {     
