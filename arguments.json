@@ -1,0 +1,139 @@
+{
+    "--user-interactive":{
+        "short_name" : "-u",
+        "help": "Generator will be interactive with the user",
+        "action": "store_true"
+    },
+    "--output-directory":{
+        "short_name" : "-o",
+        "help": "Set the directory where the output file will be stored",
+        "type": "str",
+        "default": "./"
+    },
+    "--cpus":{
+        "short_name" : "-cpus",
+        "help": "Set number of cpus",
+        "name": "CPUS",
+        "type": "int",
+        "default": 2,
+        "group": "GLOBAL"
+    },
+    "--gpus":{
+        "short_name" : "-gpus",
+        "help": "Set number of gpus",
+        "name": "GPUS",
+        "type": "int",
+        "default": 0,
+        "group": "GLOBAL"
+    },
+    "--horizon":{
+        "short_name" : "-hor",
+        "help": "Set horizon value for training process",
+        "name": "HORIZON",
+        "type": "int",
+        "default": 10000,
+        "group": "GLOBAL"
+    },
+    "--rollouts":{
+        "short_name" : "-rol",
+        "help": "Set number of rollouts for training process",
+        "name": "ROLLOUTS",
+        "type": "int",
+        "default": 1,
+        "group": "GLOBAL"
+    },
+    "--exp-name":{
+        "short_name" : "-en",
+        "help": "Set name of the experiment",
+        "name": "EXP_NAME",
+        "type": "str",
+        "default": "exp",
+        "group": "GLOBAL"
+    },
+    "--sim-step":{
+        "short_name" : "-s",
+        "help": "Set simulation steps, required only if render == true",
+        "name": "SIM_STEP",
+        "type": "float",
+        "default": 0.01,
+        "group": "SIM"
+    },
+    "--render":{
+        "short_name" : "-r",
+        "help": "Set render flag",
+        "name": "RENDER",
+        "action": "store_true",
+        "group": "SIM"
+    },
+    "--train-iter":{
+        "short_name" : "-i",
+        "help": "Set number of training iterations",
+        "name": "TRAINING_ITERATION",
+        "type": "int",
+        "default": 50,
+        "group": "EXPERIMENT"
+    },
+    "--net":{
+        "short_name" : "-n",
+        "help": "Set grid network cols and rows on a list",
+        "name": "NETWORK",
+        "type": "str",
+        "default": "[1,1]",
+        "group": "NETWORK"
+    },
+    "--lanes":{
+        "short_name" : "-l",
+        "help": "Set number of lanes on the network",
+        "name": "LANES",
+        "type": "int",
+        "default": 1,
+        "group": "NETWORK"
+    },
+    "--baseline":{
+        "short_name" : "-b",
+        "help": "Set if baseline in tl is enabled",
+        "name": "BASELINE",
+        "action": "store_true",
+        "group": "TL"
+    },
+    "--tl-type":{
+        "short_name" : "-tl",
+        "help": "Set tl type",
+        "name": "TL_TYPE",
+        "type": "str",
+        "default": "controlled",
+        "group": "TL"
+    },
+    "--max-gap":{
+        "short_name" : "-mg",
+        "help": "Set maximum gap. Only on \"actuated\" tl",
+        "name": "MAX_GAP",
+        "type": "float",
+        "default": 5.0,
+        "group": "TL"
+    },
+    "--detector-gap":{
+        "short_name" : "-dg",
+        "help": "Set detector gap. Only on \"actuated\" tl",
+        "name": "DETECTOR_GAP",
+        "type": "float",
+        "default": 0.9,
+        "group": "TL"
+    },
+    "--flow":{
+        "short_name" : "-f",
+        "help": "Set the flows of the network as an array of [top, bot, left, right] ",
+        "name": "WAYS",
+        "type": "str",
+        "default": "[0,5,0,0]",
+        "group": "FLOW"
+    },
+    "--prob":{
+        "short_name" : "-p",
+        "help": "Set the flows of the network by probabilities ",
+        "name": "PROB",
+        "type": "float",
+        "default": 0.50,
+        "group": "FLOW"
+    }
+}
