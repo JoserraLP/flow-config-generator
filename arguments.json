@@ -43,7 +43,7 @@
         "group": "GLOBAL"
     },
     "--exp-name":{
-        "short_name" : "-en",
+        "short_name" : "-n",
         "help": "Set name of the experiment",
         "name": "EXP_NAME",
         "type": "str",
@@ -74,7 +74,7 @@
         "group": "EXPERIMENT"
     },
     "--net":{
-        "short_name" : "-n",
+        "short_name" : "-net",
         "help": "Set grid network cols and rows on a list",
         "name": "NETWORK",
         "type": "str",
