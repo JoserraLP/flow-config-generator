@@ -110,10 +110,10 @@ class Generator:
                         # Convert the string into a list
                         list_values = value.strip('][').split(',')
                         # Create the dict
-                        self.args_vals[config_group][config_name] = {}
+                        self.args_vals[config_group] = {}
                         # Store the values
-                        self.args_vals[config_group][config_name]['COLS'] = list_values[0]
-                        self.args_vals[config_group][config_name]['ROWS'] = list_values[1]
+                        self.args_vals[config_group]['COLS'] = int(list_values[0])
+                        self.args_vals[config_group]['ROWS'] = int(list_values[1])
                     # In the "WAYS" case, it is needed to split the value into four values: top, bot, left and right
                     elif config_name == "WAYS":
                         # Convert the string into a list
@@ -121,10 +121,13 @@ class Generator:
                         # Create the dict
                         self.args_vals[config_group][config_name] = {}
                         # Store the values
-                        self.args_vals[config_group][config_name]['top'] = list_values[0]
-                        self.args_vals[config_group][config_name]['bot'] = list_values[1]
-                        self.args_vals[config_group][config_name]['left'] = list_values[2]
-                        self.args_vals[config_group][config_name]['right'] = list_values[3]
+                        self.args_vals[config_group][config_name]['top'] = int(list_values[0])
+                        self.args_vals[config_group][config_name]['bot'] = int(list_values[1])
+                        self.args_vals[config_group][config_name]['left'] = int(list_values[2])
+                        self.args_vals[config_group][config_name]['right'] = int(list_values[3])
+                    # In the "PROB" case, parse the value to float
+                    elif config_name == "PROB":
+                        self.args_vals[config_group][config_name] = float(value)
                     # Otherwise, store the value itself
                     else:
                         self.args_vals[config_group][config_name] = value
